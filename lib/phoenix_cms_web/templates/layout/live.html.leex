@@ -1,0 +1,13 @@
+<div class="container">
+  <%= if live_flash(@flash, :error) do %>
+    <article class="message is-danger mt-6" role="alert"
+                                       phx-click="lv:clear-flash"
+                                       phx-value-key="error">
+      <div class="message-body">
+        <%= live_flash(@flash, :error) %>
+      </div>
+    </article>
+  <% end %>
+</div>
+
+<%= @inner_content %>
